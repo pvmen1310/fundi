@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './search-list';","map":{"version":3,"sources":["D:/xampp/htdocs/fundi/fundi_new/fundi-next/components/Search/SearchList/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,eAAxB","sourcesContent":["export { default } from './search-list';\r\n"]},"metadata":{},"sourceType":"module"}

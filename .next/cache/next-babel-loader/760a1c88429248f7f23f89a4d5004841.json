@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './blog-item';","map":{"version":3,"sources":["D:/xampp/htdocs/fundi/fundi_new/fundi-next/components/Blogs/BlogItem/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,aAAxB","sourcesContent":["export { default } from './blog-item';\r\n"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './about';","map":{"version":3,"sources":["D:/xampp/htdocs/fundi/fundi_new/fundi-next/components/Pages/About/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,SAAxB","sourcesContent":["export { default } from './about';"]},"metadata":{},"sourceType":"module"}

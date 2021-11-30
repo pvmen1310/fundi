@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default } from './header-account-mobile';","map":{"version":3,"sources":["D:/xampp/htdocs/fundi/fundi_new/fundi-next/components/Header/HeaderAccountMobile/index.js"],"names":["default"],"mappings":"AAAA,SAASA,OAAT,QAAwB,yBAAxB","sourcesContent":["export { default } from './header-account-mobile';"]},"metadata":{},"sourceType":"module"}

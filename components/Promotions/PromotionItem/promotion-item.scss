@@ -1,0 +1,46 @@
+// Promotion Item
+
+@import 'mixins';
+@import 'variables';
+
+.promotion-item {
+    img {
+        width: 100%;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+    }
+
+    &-content {
+        padding: $grid-gutter-width;
+        background: $color-base-dark-gray;
+
+        .table {
+            background: $color-base-dark;
+            text-align: center;
+
+            th,
+            td {
+                border: 0.0625rem $color-base-dark-gray solid;
+            }
+        }
+    }
+
+    &-terms {
+        padding: $grid-gutter-width;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        background: $color-base-gray;
+
+        ol {
+            padding-left: 0.75rem;
+        }
+
+        li {
+            margin-top: 1.25rem;
+        }
+
+        table {
+            margin-top: 1.25rem;
+        }
+    }
+}

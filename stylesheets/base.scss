@@ -1,0 +1,83 @@
+//Base
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-display: swap;
+    src: url('/assets/fonts/segoeui.ttf');
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    font-display: swap;
+    src: url('/assets/fonts/seguisb.ttf');
+}
+
+@font-face {
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    font-display: swap;
+    src: url('/assets/fonts/segoeuib.ttf');
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    background-color: $color-base-light;
+    padding-left: 0rem;
+    padding-right: 0rem;
+
+}
+
+body {
+    @include media-breakpoint-down(lg) {
+        padding-top: env(safe-area-inset-top);
+    }
+}   
+
+hr {
+    width: 50%;
+    height: 0.0625rem;
+    background: linear-gradient( to right, transparent, $color-brand-primary, transparent );
+}
+
+iframe {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    @media (max-width: 575.98px) {
+        display: none;
+     }
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    > main {
+        @include media-breakpoint-down(lg) {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0rem;
+        }
+        
+        position: relative;
+        flex: 1 1 auto;
+        padding-top: 0rem;
+    }
+}
+
+
+.container {
+    max-width: 1200px !important;
+}

@@ -1,0 +1,77 @@
+// Icons
+
+.wb-logo {
+    margin-right: -2.875em;
+
+    &:lang(zh),
+    &:lang(my) {
+        margin-right: 0;
+    }
+
+    &-zh {
+        display: none;
+
+        &:lang(zh),
+        &:lang(my) {
+            display: block;
+        }
+    }
+}
+
+.fill {
+    &-primary {
+        fill: $color-primary-lb;
+
+        path{
+            fill: $color-primary-lb;
+        }
+    }
+
+    &-dark {
+        fill: $color-base-dark;
+
+        path{
+            fill: $color-base-dark;
+        }
+    }
+
+    &-light {
+        fill: $color-base-light;
+
+        path{
+            fill: $color-base-light;
+        }
+    }
+
+    &-gray {
+        fill: $color-base-gray;
+
+        path{
+            fill: $color-base-gray;
+        }
+    }
+
+    &-dark-gray {
+        fill: $color-base-dark-gray;
+
+        path{
+            fill: $color-base-dark-gray;
+        }
+    }
+
+    &-success {
+        fill: $color-brand-primary;
+
+        path{
+            fill: $color-brand-primary;
+        }
+    }
+
+    &-error {
+        fill: $color-base-red;
+
+        path{
+            fill: $color-base-red;
+        }
+    }
+}

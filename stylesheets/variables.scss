@@ -1,0 +1,46 @@
+// Variables
+
+// Bootstrap
+$enable-rounded                 : false;
+$enable-transitions             : false;
+
+// Slick
+$slick-font-path                : "/assets/fonts/";
+
+// Grid
+$grid-gutter-width              : 1.25rem;
+
+// Fonts
+$font-family-default            : 'Segoe UI','Montserrat', 'Helvetica Neue', 'Helvetica', 'Arial', 'Microsoft Yahei', sans-serif;
+$font-family-zh                 : 'Segoe UI','Microsoft Yahei', sans-serif;
+
+// Colors
+$color-brand-primary            : #ba2020;
+$color-brand-primary-lb         : #ba2020;
+$color-brand-secondary          : #b87333;
+$color-primary-lb               : #ff5252;
+
+$color-base-dark                : #000;
+$color-base-dark-gray           : #111;
+$color-base-red                 : #ad2e34;
+$color-base-gray                : #333333;
+$color-base-gray-ff5252         : #FF5252;
+$color-base-light-gray          : #ccc;
+$color-base-light               : #fff;
+$color-base-red                 : #c0392b;
+
+$color-sportsbook               : #e74c3c;
+$color-live-casino              : #f1c40f;
+$color-slots                    : #3498db;
+
+//$color-gradient-primary         : linear-gradient(35deg, #43a50b, #83cf16);
+$color-gradient-primary         : #FF5252;
+$color-gradient-primary-alt     : linear-gradient(35deg, #83cf16, #43a50b);
+$color-gradient-secondary       : linear-gradient(35deg, #2a2a2a, #3d3d3d);
+$color-gradient-secondary-alt   : linear-gradient(35deg, #3d3d3d, #2a2a2a);
+
+// Layout
+$layout-border-radius           : 0.5rem;
+
+//Transitions
+$transition                     : all 600ms cubic-bezier(0.23, 1, 0.32, 1);

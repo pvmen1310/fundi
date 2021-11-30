@@ -1,0 +1,190 @@
+// Carousel
+
+$slick-font-path: "node_modules/slick-carousel/slick/fonts/";
+$slick-loader-path: "node_modules/slick-carousel/slick/";
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+//@import 'node_modules/slick-carousel/slick/slick.scss';
+//@import 'node_modules/slick-carousel/slick/slick-theme.scss';
+
+.slick-dots li button {
+    color: black !important;
+}
+
+.carousel .slick-dots li button:before {
+    color: grey !important;
+}
+
+.carousel {
+    @include media-breakpoint-only(xs) {
+        order: -1;
+        margin-bottom: 0;
+    }
+    @include media-breakpoint-up(lg) {
+        .row {
+
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    width: 100%;
+
+    &-box,
+    &-box-full,
+    &-nav {
+        @include make-col-ready();
+        @include media-breakpoint-up(lg) {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .slick-dots {
+        bottom: 10px;
+        li {
+            margin: 0;
+            button:before {
+                color: white;
+                font-size: 10px !important;
+            }
+            &.slick-active {
+                button:before {
+                    color: black !important;
+                }
+            }
+        }
+    }
+
+    &-box {
+        > div {
+            overflow: hidden;
+
+            @include media-breakpoint-up(sm) {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+
+            @include media-breakpoint-up(lg) {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+
+        img {
+            display: inline-block;
+            width: 100%;
+            height: 400px;
+        }
+
+        @media (max-width: 575.98px) {
+            max-width: 100% !important;
+            .row {
+                display: flex;
+            }
+
+            img {
+                display: inline-block;
+                width: 100%;
+                height: 210px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            padding : 0;
+            max-width: 100% !important;
+            .row {
+                display: flex;
+            }
+        }
+    }
+
+    &-box-full {
+        > div {
+            overflow: hidden;
+            border-radius: $layout-border-radius;
+        }
+
+        img {
+            display: inline-block;
+            width: 100%;
+        }
+
+         max-width: 69% !important;
+         margin-right:5px;
+    }
+
+    &-nav {
+        @include media-breakpoint-down(md) {
+            flex: 0 0 100% !important;
+            max-width: 100% !important;
+        }
+
+        overflow: hidden;
+        background: #808080;
+        flex: 0 0 30% !important;
+        max-width: 30% !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        max-height: -webkit-fill-available !important;
+
+        img {
+            height: auto;
+            @media (max-width: 575.98px) {
+                margin-bottom: 0;
+                width: 100%;
+            }
+
+            display: inline-block;
+            width: 100%;
+        }
+        &-menu {
+            @include media-breakpoint-down(md) {
+                flex-direction: row;
+            }
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                flex: 1 1 auto;
+                max-height: 50%;
+                margin-top:5px;
+
+              @media (max-width: 767.98px) {
+                   margin-top:0;
+                   margin-left: 5px;
+               }
+            }
+
+            li:first-child {
+                margin-top: 0;
+                @media (max-width: 767.98px) {
+                   margin-top:0;
+                   margin-left:0;
+                }
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: auto;
+                padding: 0 0;
+                color: $color-base-light;
+                &:hover,
+                &:active,
+                &:focus,
+                &.active {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

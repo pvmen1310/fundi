@@ -1,0 +1,15 @@
+@import 'stylesheets/mixins';
+
+.promotions-list {
+    @include make-col-ready;
+    padding: 0 0.625rem;
+    background : #E3DCE2;
+
+    @include media-breakpoint-only(xs) {
+        margin-top: 3.75rem;
+    }
+    
+    @include media-breakpoint-up(xl) {
+        @include make-col(10);
+    }
+}

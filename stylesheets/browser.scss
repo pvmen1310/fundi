@@ -1,0 +1,29 @@
+// Browser
+
+::-webkit-scrollbar {
+    @include media-breakpoint-down(sm) {
+        width: 0;
+        height: 0;
+    }
+
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: $color-base-dark-gray;
+}
+
+::-webkit-scrollbar-thumb {
+    @include media-breakpoint-down(sm) {
+        background: transparent;
+    }
+    
+    border-radius: 1rem;
+    background: $color-brand-primary-lb;
+}
+
+::selection {
+    background: $color-brand-primary;
+    color: $color-base-light;
+}

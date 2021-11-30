@@ -1,0 +1,17 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+.banner_404 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 0;
+  padding-top: 150px;
+  white-space: nowrap;
+  text-align: center;
+  background: #d4d9dd;
+  height: 30rem;
+}

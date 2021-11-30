@@ -1,0 +1,76 @@
+// Tables
+
+.table {
+    @include media-breakpoint-down(md) {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+
+        th, td {
+            white-space: nowrap;
+        }
+    }
+    color:white;
+    background: $color-base-gray;
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    thead {
+        background: $color-base-dark-gray;
+
+        th {
+            border: none !important;
+            font-weight: 300;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            color:white;
+            &:hover {
+                color: $color-brand-secondary;
+            }
+        }
+        th:not(:last-child) {
+            border-right: 0.125rem solid $color-base-dark-gray;
+        }
+    }
+
+    td,
+    th {
+        vertical-align: middle;
+        border: none;
+    }
+
+    td {
+        &.paid,
+        &.success {
+            color: $color-brand-primary;
+        }
+        &.warning {
+            color: $color-brand-secondary;
+        }
+        &.declined,
+        &.error {
+            color: $color-base-red;
+        }
+
+        &.mute {
+            color: rgba($color-base-light, 0.25)
+        }
+    }
+
+    &-striped {
+        tbody {
+            tr {
+                transition: $transition;
+
+                &:hover {
+                    cursor: pointer;
+                    background: $color-base-dark-gray;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+// Buttons
+
+@mixin button($link, $hover, $blur) {
+    background: $link;
+
+    &:hover,
+    &:focus {
+        border-color: transparent;
+        background: $hover;
+        color: $color-base-light;
+    }
+
+    &:not(:disabled):not(.disabled):active {
+        background: $link;
+
+        &:focus {
+            box-shadow: 0 0 1.25rem 0.125rem rgba( $blur, 0.5 );
+        }
+    }
+}
+
+.btn {
+    @include media-breakpoint-down(md) {
+        padding: 0 0.875rem;
+    }
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 7.5rem;
+    height: 1.875rem;
+    padding: 0 1.25rem;
+    border: none;
+    border-radius: $layout-border-radius;
+    background: $color-base-dark-gray;
+    
+    color: $color-base-light;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+        border-color: transparent;
+        background: $color-base-gray;
+        box-shadow: none;
+        color: $color-base-light;
+        outline: none;
+    }
+
+    &-default {
+        border: 0.125rem $color-base-light solid;
+        background: none;
+
+        &:hover {
+            border-color: transparent;
+        }
+
+        @include button(
+            none,
+            $color-gradient-primary,
+            $color-brand-primary
+        );
+
+        &:not(:disabled):not(.disabled):active {
+            background: $color-gradient-primary;
+        }
+    }
+
+    &-primary {
+        @include button(
+            $color-primary-lb,
+            $color-primary-lb,
+            $color-brand-primary
+        );
+    }
+
+    &-primary-lb {
+        @include button(
+            $color-primary-lb,
+            $color-primary-lb,
+            $color-brand-primary
+        );
+    }
+
+    &-secondary {
+        @include button(
+            $color-gradient-secondary,
+            $color-gradient-secondary-alt,
+            $color-base-light-gray
+        );
+    }
+
+    &-lg {
+        @include media-breakpoint-up(lg) {
+            padding: 1.125rem 2.5rem;
+        }
+    }
+
+    &-file {
+        display: inline-flex !important;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+
+        span {
+            display: flex;
+            flex: 1 1 auto;
+        }
+
+        input {
+            position: absolute;
+            width: 0.125rem;
+            height: 0.125rem;
+            z-index: -1;
+            left: 100%;
+            opacity: 0;
+        }
+    }
+}

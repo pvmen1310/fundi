@@ -1,0 +1,89 @@
+// Forms
+
+.form-control {
+    height: 1.875rem;
+    border-radius: 0.5rem;
+    background: $color-base-light-gray;
+    color: $color-base-gray;
+
+    &-not-rounded {
+        border-radius: 0;
+    }
+
+    &-date {
+        > div {
+            display: flex;
+            flex: 1;
+
+            > div {
+                display: flex;
+                flex: 1;
+                
+                > div {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+.player-center {
+    label {
+        display: block;
+        color: $color-base-light-gray;
+    }
+
+    select.form-control:not([size]):not([multiple]) {
+        height: 1.875rem;
+    }
+
+    .input-group {
+        position: relative;
+
+        .icon {
+            
+            position: absolute;
+        }
+
+        .form-control {
+            text-align: right;
+        }
+    }
+
+    .form-control {
+        margin-bottom: 1.25rem;
+        border-radius: 0;
+        border: 0;
+        border-bottom: solid 0.0625rem $color-base-light;
+        background: none;
+        color: $color-base-light;
+        transition: $transition;
+        text-align: right;
+
+        option {
+            border: 0;
+            background: $color-base-gray;
+
+            &:hover {
+                background: $color-brand-primary;
+            }
+        }
+
+        &:focus {
+            box-shadow: none;
+            border-bottom-color: $color-brand-primary;
+        }
+
+        &:disabled {
+            color: $color-base-light-gray;
+            border-bottom: solid 0.0625rem $color-base-dark-gray;
+        }
+    }
+
+    .sender-name {
+        .form-control {
+            padding: .375rem .0;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

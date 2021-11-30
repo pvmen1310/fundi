@@ -1,0 +1,75 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+
+.channels {
+    @include media-breakpoint-only(xs) {
+        order: -1;
+        margin-bottom: 0;
+    }
+
+    height: auto;
+
+    width: 100%;
+    padding-top : $grid-gutter-width;
+
+    &-title {
+         border: gray;
+         border-style: ridge;
+         border-top: none;
+         border-right: none;
+         border-left: none;
+         padding-top: 60px;
+         padding-bottom: 15px;
+         padding-left: 0px !important;
+         border-width: 1px;
+         font-size: 18px;
+
+      @media (max-width: 575.98px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-image {
+      @media (max-width: 575.98px) {
+        max-width: 50% !important
+      }
+      
+    }
+
+    &-scrolling {
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    }
+
+    .container {
+        z-index: 99;
+    }
+
+    &-scrollbutton {
+        margin-top: 5rem;
+        z-index: 100;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    ::-webkit-scrollbar-track {
+      background: white;
+    }
+    ::-webkit-scrollbar-thumb {
+      border-radius: 1rem;
+      background: white;
+    }
+
+    ::-webkit-scrollbar-button{
+      background-color: red;
+      height: 13px;
+      width: 16px;
+    }
+}

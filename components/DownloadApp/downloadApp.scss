@@ -1,0 +1,28 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+
+#download-image {
+    width:297px !important;
+    height:500px !important;
+    margin-left:120px;
+      @media (max-width: 575.98px) {
+         margin-left:0px !important;
+         width:auto !important;
+         height:auto !important;
+   }
+}
+
+.download-button{
+     width:80px !important;
+     height:auto !important;
+}
+
+#download-button-2 {
+
+      @media (max-width: 575.98px) {
+            margin-left : 101px;
+      }
+}

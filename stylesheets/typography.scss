@@ -1,0 +1,127 @@
+// Typography
+
+body {
+    font-family: $font-family-default;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $color-base-light;
+    
+    &:lang(zh) {
+        font-family: $font-family-zh;
+        font-weight: 300;
+    }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+    font-weight: 400;
+    color: $color-brand-secondary;
+
+    &:lang(zh) {
+        font-weight: 300;
+    }
+}
+
+h1,
+.h1 {
+    font-size: 1.5rem;
+    
+    &:lang(zh) {
+        font-size: 1.75rem;
+    }
+}
+
+h2,
+.h2 {
+    font-size: 1.25rem;
+
+    &:lang(zh) {
+        font-size: 1.5rem;
+    }
+}
+
+h3,
+.h3 {
+    font-size: 1rem;
+
+    &:lang(zh) {
+        font-size: 1.25rem;
+    }
+}
+
+h4,
+.h4 {
+    font-size: 0.875rem;
+
+    &:lang(zh) {
+        font-size: 1rem;
+    }
+}
+
+p,
+ul,
+ol,
+dl {
+    &:lang(en),
+    &:lang(id),
+    &:lang(my), {
+        font-size: 0.75rem;
+    }
+}
+
+strong,
+b {
+    font-weight: 400;
+    color: $color-base-gray-ff5252 ;
+}
+
+a {
+    color: $color-base-gray-ff5252 ;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color-brand-secondary;
+        text-decoration: none;
+    }
+}
+
+input,
+select,
+label {
+    font-size: 0.75rem;
+}
+
+.form-control,
+.table,
+.btn {
+    font-size: 0.75rem;
+}
+
+.btn {
+    @include media-breakpoint-down(lg) {
+        font-size: 0.625rem;
+    }
+}
+
+.color {
+    &-primary,
+    &-success {
+        color: $color-brand-primary;
+    }
+
+    &-secondary,
+    &-warning {
+        color: $color-brand-secondary;
+    }
+
+    &-error {
+        color: $color-base-red;
+    }
+
+    &-light {
+        color: $color-base-light;
+    }
+}

@@ -1,0 +1,139 @@
+// Header
+
+@import 'stylesheets/variables';
+@import 'stylesheets/mixins';
+
+
+.header {
+    display: flex;
+    z-index: 30000000;
+    transition: $transition;
+    flex-direction : column
+}
+
+.header-top , .header-middle , .header-bottom {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    width: 100%;
+}
+
+.header-top {
+    height: 65px;
+    background: #D10707;
+    .row {
+        margin-left: 0rem !important;
+    }
+}
+
+.header-middle {
+    height: auto;
+    background: #fef2f2;
+    @media (max-width: 575.98px) {
+      padding: 0.2rem 0.35rem;
+    }
+}
+
+.header-bottom {
+    height: auto;
+    background: #21242D;
+    align-items : center;
+
+    h3 {
+       font-size : 0.85rem;
+
+       @media (max-width: 575.98px) {
+          font-size : 0.7rem;
+       }
+    }
+}
+
+
+.step {
+
+    max-width:20% !important;
+    margin-left:10px !important;
+    color: black;
+
+    @media (max-width: 575.98px) {
+        max-width:100% !important;
+        margin-left:20px;
+     }
+}
+
+.hidden-in-mobile {
+    @media (max-width: 575.98px) {
+       display: none;
+     }
+}
+
+
+ .search {
+    &-input {
+        border-style : none !important;
+        border-radius: 43rem;
+        height: 2.6rem;
+        padding-left: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #333!important;
+        width: 30rem;
+        background-size: 25px 25px;
+
+        @media (max-width: 575.98px) {
+            width: 20rem;
+            background-position: 17.2rem .35rem;
+            font-size: 0.75rem;
+        }
+
+    }
+
+    &-box {
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+
+      @media (max-width: 575.98px) {
+         margin: 2rem 1.5rem;
+      }
+    }
+
+    &-icon {
+         position: absolute;
+         place-self: flex-end;
+         width: 70px;
+         height: 25px;
+         cursor: pointer;
+         padding-right: 3rem;
+
+         @media (max-width: 575.98px) {
+             width: 40px;
+             padding-right: 1rem;
+         }
+    }
+}
+
+.btn-registration {
+    margin-top: 1.5rem !important;
+    @media (max-width: 575.98px) {
+        margin-top: -32px !important;
+        width: 75% !important;
+        margin-left: 90px !important;
+    }
+}
+
+
+.btn-account {
+    margin-top:20px !important;
+    text-align: left !important;
+    @media (max-width: 575.98px) {
+        margin-top: -35px !important;
+        text-align: right !important;
+    }
+}
+
+.hidden-in-mobile {
+    @media (max-width: 575.98px) {
+       display: none;
+    }
+}

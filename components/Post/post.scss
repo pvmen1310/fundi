@@ -1,0 +1,38 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+.post {
+    img {
+        max-width: 100% !important;
+        height : auto;
+        width: auto;
+    }
+
+    b, strong {
+      color: #ff5252 !important;
+      font-weight: 700;
+      padding: 0.5rem;
+      padding-top : 1rem;
+      padding-bottom : 1rem;
+    }
+
+    .su-button-center {
+      text-align: center;
+      padding : 1rem;
+    }
+
+    h3 {
+      > span {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      color : black;
+    }
+
+    p {
+        color : black;
+    }
+}

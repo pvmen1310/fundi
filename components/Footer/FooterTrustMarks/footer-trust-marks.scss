@@ -1,0 +1,154 @@
+// Footer Trust Marks
+
+@import 'mixins';
+@import 'variables';
+
+.footer {
+    &-mobile-app {
+        text-align: center;
+
+        @include make-col-ready();
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(2);
+        }
+
+        svg {
+            width: 100%;
+            padding: 0.625rem;
+        }
+
+        img {
+            width: 100%;
+            padding: 0.625rem;
+        }
+    }
+
+    &-providers,
+    &-trust-marks {
+        svg {
+            display: inline-block;
+            cursor: pointer;
+            fill: $color-base-light;
+        }
+
+        img {
+            display: inline-block;
+            cursor: pointer;
+            fill: $color-base-light;
+        }
+
+
+        @include make-col-ready();
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &-providers {
+        // @include media-breakpoint-down(md) {
+        //     display: none;
+        // }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(7);
+        }
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        svg {
+            flex: 1 1 10%;
+            max-width: 10%;
+            height: 3.125rem;
+            
+            &.wb-logo {
+                flex: 1 1 20%;
+                max-width: 20%;
+            }
+            
+            @include media-breakpoint-only(xl) {
+                height: 3.75rem;
+            }
+        }
+
+        svg:not(:nth-child(1)) {
+            &:hover {
+                path {
+                    fill: $color-brand-primary;
+                    transition: $transition;
+                }
+            }
+        }
+
+        img {
+            flex: 1 1 10%;
+            max-width: 10%;
+            height: 3.125rem;
+
+            &.wb-logo {
+                flex: 1 1 20%;
+                max-width: 20%;
+            }
+
+            @include media-breakpoint-only(xl) {
+                height: 3.75rem;
+            }
+        }
+
+        img:not(:nth-child(1)) {
+            &:hover {
+                path {
+                    fill: $color-brand-primary;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+
+    &-trust-marks {
+        text-align: center;
+
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(3);
+        }
+
+        svg {
+            @include media-breakpoint-down(md) {
+                display: block;
+                max-width: 20rem;
+                margin: 0 auto;
+            }
+
+            width: 100%;
+            padding: 0.625rem;
+
+            path {
+                fill: $color-base-light-gray;
+            }
+        }
+
+        img {
+            @include media-breakpoint-down(md) {
+                display: block;
+                max-width: 20rem;
+                margin: 0 auto;
+            }
+
+            width: 100%;
+            padding: 0.625rem;
+
+            path {
+                fill: $color-base-light-gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,159 @@
+// Header Navigation
+
+@import 'stylesheets/variables';
+
+.header {
+    &-nav {
+        flex: 1 1 auto;
+
+        ul {
+            margin: 0.2rem 0rem;
+            height: 3.0rem;
+            list-style: none;
+            padding-inline-start: 0.5rem;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+        }
+
+        &-menu {
+            display: flex;
+            height: 100%;
+            border-style: ridge;
+            border-width: thin;
+            border-color : #dc6464;
+
+            > li {
+                position: relative;
+                display: flex;
+                font-size: 0.92rem;
+                font-family: sans-serif;
+                align-items : center;
+                margin-right : 0.5rem;
+                border-right: thin dashed #bdaaaa;
+
+                div.badge {
+                    align-self: center;
+                    margin-top: -1.25rem;
+                    margin-left: -0.5rem;
+                    margin-right: 0.5rem;
+
+                    span {
+                        padding: 0.25rem;
+                        background: #f00;
+                        font-size: 1.5rem;
+                        text-transform: uppercase;
+                    }
+                }
+
+                &:hover {
+                    .header-nav-submenu {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+                }
+
+                > a {
+                    padding: 0rem 0.3rem;
+                    color: $color-base-light;
+
+                    &:hover,
+                    &:focus,
+                    &:active {
+                        color: $color-brand-primary;
+                    }
+
+                    &.active {
+                        color: $color-base-dark-gray;
+                        img {
+                            color : $color-base-dark-gray;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &-submenu {
+            box-shadow: inset 0 1.25rem 2.5rem rgba($color-base-dark, 0.4);
+            position: fixed;
+            z-index: 100;
+            top: 5rem;
+            left: 0;
+            width: 100%;
+            padding: 1.25rem 0;
+            background: $color-base-dark-gray;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: $transition;
+
+            .menu-item {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+
+                a {
+                    margin: 0 auto;
+                    font-size: 0.625rem;
+                }
+
+                &:after {
+                    position: absolute;
+                    right: 0;
+                    content: '';
+                    display: block;
+                    height: 100%;
+                    width: 0.125rem;
+                    background: linear-gradient( to bottom, transparent, $color-brand-primary, transparent );
+                }
+
+                &:last-child:after {
+                    display: none;
+                }
+
+                &-img {
+                    padding: 0.625rem;
+                    
+                    > svg {
+                        max-width: 7.5rem;
+                        height: 4.25rem;
+                        fill: $color-base-light;
+                    }
+
+                    > img {
+                        max-width: 7.5rem;
+                        height: 4.25rem;
+                        fill: $color-base-light;
+                        margin-bottom: 0.5rem;
+                    }
+
+                    //img {
+                    //    max-width: 8rem;
+                    //    display: block;
+                    //    margin-bottom: 1.25rem;
+                    //}
+
+                    span {
+                        margin-left: 0.25rem;
+                    }
+                }
+
+                &-links {
+                    margin-top: 1.25rem;
+                    padding: 0.625rem;
+                }
+
+                &-title {
+                    color: $color-brand-secondary;
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,135 @@
+// Products
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+@import 'node_modules/bootstrap/scss/mixins/grid';
+@import 'node_modules/bootstrap/scss/mixins/grid-framework';
+@import 'stylesheets/variables';
+
+.search {
+    margin-bottom: $grid-gutter-width;
+    padding-left: 0.2rem !important;
+    padding-right: 0.2rem !important;
+
+    background : #E3DCE2;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+        max-width: 50% !important;
+        flex: 0 0 50% !important;
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+    }
+
+    max-width: 25% !important;
+    flex: 0 0 25% !important;
+
+    .img-fluid {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        max-height: 10.75rem;
+        min-height: 10rem;
+    }
+
+    &-item {
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border-radius: 0rem;
+
+        &.mobile {
+            .search-description {
+                h4  {
+                    font-size: 0.75rem;
+                }
+
+                .row {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+
+            }
+        }
+
+        &.desktop {
+            .search-description {
+                h4  {
+                    font-size: 0.85rem;
+                }
+            }
+        }
+
+    }
+
+    &-title {
+        margin: 0;
+    }
+
+    &-description {
+        position: inherit;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 20%;
+        padding: 0.8rem .4rem;
+        padding-bottom: 0.2rem;
+        text-align: start;
+        background: $color-base-light;
+        color: black;
+
+        h1,h2,h3,h4 {
+            color: #333;
+            font-weight : 600;
+        }
+        p {
+            margin: 0;
+        }
+
+
+        @media (max-width: 575.98px) {
+            .row {
+                margin-right: 0 !important;
+                margin-left: 0 !important;
+            }
+        }
+    }
+
+    &-price {
+       color : red !important;
+    }
+
+    &-original-price {
+        color: gray !important;
+        text-decoration-line: line-through;
+    }
+
+    &-percent {
+        background: red;
+        color : white !important;
+        padding : .1rem .45rem;
+        text-align: center;
+        margin-left: auto;
+    }
+
+    &-channel-icon {
+        position: absolute;
+        place-self: flex-end;
+        margin-right : 0.1rem;
+        margin-top : 0.25rem;
+        padding-right : 0.2rem;
+
+        img {
+            width : 65px;
+            height : 45px;
+            border-radius: 0.3rem;
+
+            -webkit-box-shadow: 0 0.15rem rgba(71,82,93,.8);
+        }
+    }
+}

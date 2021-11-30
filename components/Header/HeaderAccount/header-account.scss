@@ -1,0 +1,209 @@
+// Header Account
+
+@import 'stylesheets/variables';
+
+.header-account {
+    display: flex;
+    white-space: nowrap;
+    margin-left: auto;
+    place-self: flex-end;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: auto;
+    margin-top: auto;
+    
+    .input-group {
+        position: relative;
+        margin-left: 0.5rem;
+    }
+
+        h1,h2,h3,a {
+            color: #9C0D1D;
+            font-family: Segoe UI;
+            font-weight:600;
+        }
+
+        h2 {
+            font-size: 1.09rem;
+            line-height: 1.1rem
+        }
+
+    .input-captcha {
+        margin-right: 0.5rem;a
+
+        &:hover,
+        &.active {
+            .form-captcha {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .form-control {
+                border-bottom-left-radius: 0;
+            }
+            
+            .icon {
+                border-bottom-right-radius: 0;
+            }
+        }
+
+    }
+
+    .form-control {
+        &-left-border {
+            border-radius: 0;
+            border-top-left-radius: $layout-border-radius;
+            border-bottom-left-radius: $layout-border-radius;
+        }
+    }
+
+     .bold {
+            font-weight:bold;
+    }
+
+    .btn {
+        margin-right: 0.5rem;
+    }
+
+    &-form {
+        display: flex;
+        align-items: flex-end;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            background: $color-base-light-gray;
+            padding: 0 0.5rem;
+            border-top-right-radius: $layout-border-radius;
+            border-bottom-right-radius: $layout-border-radius;
+            cursor: pointer;
+        }
+    }
+
+    &-user {
+        display: flex;
+    }
+
+    &-profile,
+    &-wallet,
+    &-deposit,
+    &-messages {
+        display: flex;
+        margin-right: 1.25rem;
+
+        > a,
+        > span {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &-profile {
+        .profile {
+            &-greetings {
+                margin-right: 0.25rem;
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    &-wallet {
+        position: relative;
+        
+        .wallet {
+            &-currency,
+            &-balance {
+                margin-right: 0.25rem;
+            }
+
+            &-currency {
+                color: $color-base-light;
+            }
+        }
+        
+        &:hover {
+            .header-account-wallet-menu {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+        }
+        
+        &-menu {
+            position: absolute;
+            z-index: 100;
+            top: 100%;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            padding-bottom: 0.5rem;
+            margin: 0;
+            border-bottom-right-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+            list-style: none;
+            background: $color-base-gray;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: $transition;
+
+            a {
+                display: flex;
+                padding: 0.75rem;
+                color: $color-base-light;
+
+                span {
+                    flex: 1 1 auto;
+
+                    &:first-child {
+                        padding-right: 1.25rem;
+                    }
+
+                    &:last-child {
+                        color: $color-brand-secondary;
+                        text-align: right;
+                    }
+                }
+
+                &:hover {
+                    background: $color-base-dark-gray;
+                    box-shadow: inset 0.25rem 0 0 $color-brand-primary;
+                }
+
+                &.disabled {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &-messages {
+        position: relative;
+
+        a {
+            cursor: pointer;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            right: -0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 0.875rem;
+            height: 0.875rem;
+            margin-top: -0.75rem;
+            border-radius: 1.25rem;
+            background: $color-base-red;
+            font-size: 0.5rem;
+            color: $color-base-light;
+        }
+    }
+
+    &-deposit {
+        margin-right: 0.5rem;
+        align-items: center;
+    }
+}

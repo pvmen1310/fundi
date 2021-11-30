@@ -1,0 +1,148 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+.react-tabs {
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .react-tabs__tab-list {
+      border-bottom: 1px solid #aaa;
+      margin: 0 0 10px;
+      padding: 0;
+    }
+    
+    .react-tabs__tab {
+      display: inline-block;
+      border: 1px solid transparent;
+      border-bottom: none;
+      bottom: -1px;
+      position: relative;
+      list-style: none;
+      padding: 6px 25px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    
+    .react-tabs__tab--selected {
+      background: #fff;
+      border-color: #aaa;
+      color: black;
+      border-radius: 5px 5px 0 0;
+      font-weight: bold;
+    }
+    
+    .react-tabs__tab--disabled {
+      color: GrayText;
+      cursor: default;
+    }
+    
+    .react-tabs__tab:focus {
+      box-shadow: 0 0 5px hsl(208, 99%, 50%);
+      border-color: hsl(208, 99%, 50%);
+      outline: none;
+    }
+    
+    .react-tabs__tab:focus:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      left: -4px;
+      right: -4px;
+      bottom: -5px;
+      background: #fff;
+    }
+    
+    .react-tabs__tab-panel {
+      display: none;
+    }
+    
+    .react-tabs__tab-panel--selected {
+      display: block;
+    }
+
+    
+
+.popup-content {
+    margin-top: 150px !important;
+
+    @media (max-width: 575.98px) {
+      margin-top: 10px !important;
+  }
+} 
+
+.popup-overlay { 
+      background-color: rgba(0,0,0,.4) !important;
+}
+.modal {
+      font-size: 12px;
+    }
+    .modal > .header {
+      width: 100%;
+      border-bottom: 1px solid white;
+      font-size: 18px;
+      text-align: center;
+      background: white;
+    }
+    .modal > .content {
+      width: 100%;
+      padding: 15px 15px;
+      background: white;
+      color: black;
+    }
+    .modal > .actions {
+      width: 100%;
+      padding: 10px 5px;
+      margin: auto;
+      text-align: center;
+    }
+    .modal > .close {
+      cursor: pointer;
+      position: absolute;
+      display: block;
+      padding: 6px 9px;
+      line-height: 20px;
+      right: -10px;
+      top: -10px;
+      font-size: 24px;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #cfcece;
+      color: gray;
+    }
+
+    .form-control {
+      height: 1.9rem;
+      border-radius: 0.25rem;
+      background: white;
+      color: #333333;
+  }
+
+  button {
+      color: white;
+      border-style: hidden;
+      border-width: 1px;
+      border-radius: 5px;
+      padding: 7px 9px;
+      font-size: 12px;
+  }
+
+  .no-margin {
+
+    @media (max-width: 575.98px) {
+        margin-left: 0px !important;
+    }
+  }
+
+  .hidden-in-mobile {
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+  }
+
+  .no-margin-top-mobile {
+    @media (max-width: 575.98px) {
+      margin-top: 0px !important;
+    }
+  }

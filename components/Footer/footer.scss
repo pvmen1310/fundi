@@ -1,0 +1,129 @@
+// Footer
+
+@import 'stylesheets/variables.scss';
+@import 'stylesheets/mixins.scss';
+
+.footer {
+    position: relative;
+
+    h1,h2,h3,h4,a {
+        color: #FFFFFF;
+    }
+
+    h3 {
+        font-size:0.9rem,
+    }
+
+
+    @media (max-width: 575.98px) {
+        h1 {
+            font-size:1rem,
+        }
+
+        h2 {
+            font-size:0.9rem,
+        }
+    }
+
+     @media (max-width: 767.98px) {
+        h1 {
+           font-size:1rem,
+       }
+
+       h2 {
+           font-size:0.9rem,
+       }
+    }
+
+
+    .bold {
+        font-weight:bold;
+    }
+
+    .control {
+        height : 3rem;
+        padding-left : 0.5rem;
+        font-size: 15px;
+
+        @media (max-width: 575.98px)  {
+            font-size: 13px;
+            width: auto;
+        }
+
+         @media (max-width: 767.98px) {
+            font-size: 13px;
+            width: auto;
+         }
+    }
+
+    .button {
+       border-radius: 0rem;
+       width : 6rem
+    }
+
+    .tag {
+        background-color : #FFFFFF;
+        color : #000000;
+        padding: .15rem 0.4rem;
+        border-radius: 0.5rem;
+        font-size: .8rem;
+    }
+}
+
+.footer-top {
+    height: auto;
+    background-image: url("/assets/images/footer-top-bg.png");
+    background-size: cover;
+    padding: .625rem 0;
+    background-position: -80px;
+    border-bottom: 0.05rem solid white;
+
+    @media (max-width: 575.98px) {
+        background-position: -40rem !important;
+    }
+
+     @media (max-width: 767.98px) {
+        background-position: -40rem;
+     }
+
+    .footer-top-description {
+        @media (max-width: 575.98px) {
+            font-size: 12px;
+            width: auto;
+        }
+
+        @media (max-width: 767.98px) {
+            font-size: 12px;
+            width: auto;
+         }
+    }
+}
+
+.footer-mid {
+    height: auto;
+    background: #333333;
+    padding: 2rem 0;
+
+    .app-highlight {
+        font-weight: bold;
+        font-size: 1.1rem !important;
+    }
+
+    .app-icon {
+        width: 110px !important;
+        height: 33px !important;
+
+        @media (max-width: 575.98px) {
+            width: 220px !important;
+            height: 66px !important;
+        }
+    }
+}
+
+.footer-bottom {
+    height: auto;
+    background: #000401;
+    padding-top: 7px;
+    padding-bottom: 0.1px;
+}
+

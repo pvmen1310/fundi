@@ -1,0 +1,58 @@
+// Footer Copyright
+
+@import 'variables';
+@import 'mixins';
+
+.footer {
+    &-disclaimer,
+    &-copyright {
+        @include make-col-ready();
+        @include media-breakpoint-down(md) {
+            text-align: center;
+        }
+    }
+
+    &-disclaimer {
+        @include media-breakpoint-down(md) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(lg) {
+            @include make-col(5);
+
+            order: 1;
+            text-align: right;
+        }
+    }
+
+    &-copyright {
+        @include media-breakpoint-up(lg) {
+            // @include make-col(7);
+            order: 0;
+        }
+
+        > span {
+            display: flex;
+            
+            &:first-child {
+                @include media-breakpoint-down(md) {
+                    display: none;
+                }
+
+                p {
+                    flex-grow: 1;
+                    max-width: 66.66%;
+                }
+
+                p:last-child {
+                    text-align: right
+                }
+            }
+        }
+
+        > small {
+            display: block;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,42 @@
+User-agent: *
+Disallow: /readme.html
+Disallow: /vendor
+Disallow: /customer
+Disallow: /admin
+
+User-agent: Googlebot-Image
+Allow: /wp-content/uploads/
+
+User-agent: *
+Allow: /*.js$
+Allow: /*.css$
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: *
+Allow: /*.js$
+Allow: /*.css$
+
+User-agent: mj12bot
+Disallow:/
+User-agent: dotbot
+Disallow:/
+User-agent: exabot
+Disallow:/
+User-agent: gigabot
+Disallow:/
+User-agent: AhrefsBot
+Disallow:/
+User-agent: BacklinkCrawler
+Disallow:/
+
+User-agent: adsbot-google
+Crawl-delay: 1
+

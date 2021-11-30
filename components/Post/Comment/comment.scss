@@ -1,0 +1,25 @@
+// Products
+
+@import 'node_modules/bootstrap/scss/functions';
+@import 'node_modules/bootstrap/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins/breakpoints';
+@import 'node_modules/bootstrap/scss/mixins/grid';
+@import 'node_modules/bootstrap/scss/mixins/grid-framework';
+@import 'stylesheets/variables';
+
+.comment {
+    &-user {
+        display: flex;
+    }
+
+    &-author {
+        position: absolute;
+        margin-left: 4rem;
+    }
+
+    &-datetime {
+        position: absolute;
+        place-self:flex-end;
+        margin-left: 4rem;
+    }
+}

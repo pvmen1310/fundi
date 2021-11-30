@@ -1,0 +1,200 @@
+@import 'stylesheets/variables';
+@import 'stylesheets/mixins';
+
+.header-mobile-nav {
+    
+    position: fixed;
+    top: 0rem;
+    left: -100vw;
+
+    width: 70vw;
+    height: 100%;
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+    background: #bf2f2f;
+    opacity: 0;
+    visibility: hidden;
+    transition: $transition;
+    overflow: auto;
+    white-space: nowrap;
+
+    span {
+        font-weight: bold;
+    }
+    &-toggle {
+        position: relative;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        border-style: ridge;
+        border-width: thin;
+        border-color : #dc6464;
+        padding: 1rem;
+
+        h3 {
+            color: $color-base-light !important;
+            font-size: 1rem;
+            text-align: center;
+            margin: 0.2rem 1rem;
+            font-weight: 600;
+        }
+
+    }
+
+    &.active {
+        left: 0;
+        ///* IE 8 */
+        //-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+        //
+        ///* IE 5-7 */
+        //filter: alpha(opacity=75);
+        //
+        ///* Netscape */
+        //-moz-opacity: 0.75;
+        //
+        ///* Safari 1.x */
+        //-khtml-opacity: 0.75;
+
+        /* Good browsers */
+        opacity: 1;
+        visibility: visible;
+        background: white;
+        z-index: 100;
+    }
+
+    &-hidden {
+        position: fixed;
+        z-index: 999;
+        content: '';
+        display: block;
+        top: 0;
+        right: 0;
+        width: 10vw;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    &-user {
+        display: flex;
+        align-items: flex-end;
+        padding: 0.75rem;
+        min-height: 8rem;
+        
+        background: url('/assets/images/background-mobile.jpg') center center no-repeat;
+        background-size: cover;
+
+        .header-localization {
+            justify-content: flex-end;
+            flex: 1 1 auto;
+            margin: 0;
+            margin-bottom: -0.75rem;
+            padding: 0 0.625rem;
+
+            &-display {
+                padding: 0.625rem;
+            }
+
+            &-menu {
+
+                img {
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+    }
+
+    &-dashboard {
+        display: flex;
+        background: $color-base-dark;
+    }
+
+    &-wallet {
+        display: flex;
+        flex-direction: column;
+        flex: 3 1 auto;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem;
+        text-align: center;
+
+        &:last-child {
+            flex-grow: 1;
+            align-items: flex-end;
+            margin-right: 0.5rem;
+
+            span {
+                margin-left: 0.25rem;
+            }
+        }
+    }
+
+    &-account {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0.5rem;
+        background: $color-base-dark;
+
+        .btn {
+            flex: 1 1 20%;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+
+            span {
+                margin-left: 0.25rem;
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        margin: 0;
+        background: #BF2F2F;
+        list-style: none;
+        padding: 0.2rem;
+
+        span {
+            //flex: 1 1 auto;
+        }
+
+        svg {
+            min-width: 2.5rem;
+        }
+
+        li {
+            border-style: ridge;
+            border-width: thin;
+            border-bottom: none;
+            border-color : #dc6464;
+            border-bottom-width: 0;
+        }
+
+        a {
+            display: flex;
+            padding: 0.4rem 3.5rem;
+            color: $color-base-light;
+            font-weight: 600;
+            font-size: 1rem;
+
+            &:hover,
+            &:focus,
+            &:active, {
+                color: $color-brand-primary;
+                box-shadow: inset 0.25rem 0 0 $color-base-light;
+
+                path {
+                    fill: $color-brand-primary;
+                }
+            }
+
+            &.active {
+            }
+        }
+    }
+}

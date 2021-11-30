@@ -1,0 +1,28 @@
+@import 'variables';
+@import 'mixins';
+
+.footer {
+    @include media-breakpoint-down(lg) {
+        padding-bottom: 2.75rem;
+    }
+}
+
+.footer-account {
+    position: fixed;
+    z-index: 2800000000;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    padding-bottom: calc(0.001rem + env(safe-area-inset-bottom));
+    background: $color-base-dark;
+    display: flex;
+
+    .btn {
+        flex: 1 1 auto;
+
+        &:not(:last-child) {
+            margin-right: 0.5rem;
+        }
+    }
+}

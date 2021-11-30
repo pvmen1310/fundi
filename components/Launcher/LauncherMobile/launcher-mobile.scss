@@ -1,0 +1,55 @@
+@import 'variables';
+@import 'mixins';
+
+
+.launcher {
+    &-mobile {
+        @include make-col-ready;
+        @include media-breakpoint-up(lg) {
+            @include make-col(6);
+        }
+        
+        &-box {
+            overflow: hidden;
+            display: flex;
+            border-radius: $layout-border-radius;
+            margin-bottom: $grid-gutter-width;
+            background: $color-base-gray;
+            color: $color-base-light;
+            
+            &:hover,
+            &:focus,
+            &:active {
+                color: $color-base-light;
+                
+                .btn {
+                    border-color: transparent;
+                    background: $color-gradient-primary;
+                }
+            }
+        }
+    }
+
+    &-image {
+        padding: 0 1.25rem;
+        
+        img {
+            height: 100%;;
+            max-height: 8rem;
+            padding: 1.25rem;
+            padding-bottom: 0;
+        }
+    }
+
+    &-title {
+        color: $color-base-light;
+    }
+    
+    &-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+}

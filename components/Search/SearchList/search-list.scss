@@ -1,0 +1,32 @@
+// Carousel
+
+@import 'stylesheets/mixins';
+@import 'stylesheets/variables';
+
+.products {
+    @include media-breakpoint-only(xs) {
+        order: -1;
+        margin-bottom: 0;
+    }
+
+    background : #E3DCE2;
+    @include media-breakpoint-up(lg) {
+        .row {
+
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    width: 100%;
+    padding-top : 1rem;
+
+    .btn {
+        border-radius: 0;
+        display: inline-block;
+    }
+
+    .container {
+        text-align: center;
+    }
+}
